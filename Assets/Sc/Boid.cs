@@ -31,7 +31,7 @@ public class Boid : MonoBehaviour
         Vector3 avoid = CalculateAvoidance();
 
         // Combine forces
-        velocity += separation + alignment + cohesion ;//+ avoid;
+        velocity += separation + alignment + cohesion + avoid;
         velocity = velocity.normalized * speed;
 
         transform.position += velocity * Time.deltaTime;
